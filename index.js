@@ -3,13 +3,13 @@ const app = express();
 app.use(express.json());
 
 let notes = [
-    { id: 1, title: 'Learn Git', author: 'DevOps' },
-    { id: 2, title: 'Practice EC2', author: 'DevOps' }
-  ];
+  { id: 1, title: 'Learn Git' },
+  { id: 2, title: 'Practice EC2' }
+];
 
 app.get('/notes', (req, res) => {
-    res.json({ message: "Get all notes here!" }); // conflict line
-  });
+  res.json(notes);
+});
 
 app.post('/notes', (req, res) => {
   const note = req.body;
