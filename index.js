@@ -8,8 +8,8 @@ let notes = [
   ];
 
 app.get('/notes', (req, res) => {
-  res.json(notes);
-});
+    res.json({ message: "Get all notes here!" }); // conflict line
+  });
 
 app.post('/notes', (req, res) => {
   const note = req.body;
