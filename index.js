@@ -3,9 +3,9 @@ const app = express();
 app.use(express.json());
 
 let notes = [
-  { id: 1, title: 'Learn Git' },
-  { id: 2, title: 'Practice EC2' }
-];
+    { id: 1, title: 'Learn Git' }, // Removed author field here
+    { id: 2, title: 'Practice EC2' }
+  ];
 
 app.get('/notes', (req, res) => {
   res.json(notes);
